@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>    
+    <title>Chat</title>
+
+    <style>
+        #content {
+            border: 1px solid darkgrey;
+            width: 400px;
+            height: 300px;
+            padding: 10px;
+            overflow-y: scroll;
+        }
+        
+        #content p {
+            margin: 5px;
+        }
+        
+        #username, #content, #message, #sendMessage {
+            margin-bottom: 5px;
+        }
+    </style>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+    <script src="/js/chat.js"></script>
+    <script>
+        const ROOM = "<%= room%>"; 
+        const USER = "<%= user%>";
+    </script>
+</head>
+
+<body>
+    <h1>Room: <%= room %></h1>
+    <br>
+    <div id="content"></div>
+
+    <input id="message" placeholder="Write something..">
+    <br>
+    <button id="sendMessage">SEND</button>
+
+
+</body>
+</html>
