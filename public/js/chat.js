@@ -1,6 +1,6 @@
 $(function () {
     //Kết nối tới server socket đang lắng nghe    
-    var socket = io.connect('http://localhost:3000');
+    var socket = io.connect('http://20.192.4.125:3000');
 
     //Socket nhận data và append vào giao diện
     socket.on("send", function (data) {
